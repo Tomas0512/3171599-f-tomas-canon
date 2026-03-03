@@ -1,0 +1,15 @@
+services:
+  agrotech-operations:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=development
+    volumes:
+      - ./src:/app/src
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

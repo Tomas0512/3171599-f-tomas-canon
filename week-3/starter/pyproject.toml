@@ -1,0 +1,19 @@
+# ============================================
+# PYPROJECT.TOML - Proyecto API Catálogo AgroTech
+# ============================================
+
+[project]
+name = "agrotech-catalog-api"
+version = "3.0.0"
+description = "API de Catálogo con Búsqueda Avanzada - AgroTech"
+readme = "README.md"
+requires-python = ">=3.14"
+
+dependencies = [
+    "fastapi[standard]>=0.128.0",
+    "pydantic>=2.0.0",
+    "python-multipart>=0.0.6",
+]
+
+[tool.setuptools]
+packages = ["src"]
